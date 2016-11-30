@@ -41,8 +41,8 @@ Partial Class frmLogin
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(249, 13)
+        Me.Label1.ForeColor = System.Drawing.Color.Red
+        Me.Label1.Location = New System.Drawing.Point(390, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(199, 50)
         Me.Label1.TabIndex = 1
@@ -53,18 +53,18 @@ Partial Class frmLogin
         '
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Red
-        Me.Label2.Location = New System.Drawing.Point(94, 88)
+        Me.Label2.Location = New System.Drawing.Point(142, 114)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(282, 39)
+        Me.Label2.Size = New System.Drawing.Size(330, 39)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "QUẢN LÝ BÁN HÀNG"
+        Me.Label2.Text = "QUẢN LÝ BÁN LAPTOP"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label3
         '
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.OrangeRed
-        Me.Label3.Location = New System.Drawing.Point(94, 127)
+        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.Location = New System.Drawing.Point(175, 158)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(282, 39)
         Me.Label3.TabIndex = 1
@@ -74,8 +74,8 @@ Partial Class frmLogin
         'Label4
         '
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label4.Location = New System.Drawing.Point(72, 169)
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(139, 205)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(97, 39)
         Me.Label4.TabIndex = 1
@@ -85,8 +85,8 @@ Partial Class frmLogin
         'Label5
         '
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label5.Location = New System.Drawing.Point(72, 208)
+        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.Location = New System.Drawing.Point(139, 248)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(97, 39)
         Me.Label5.TabIndex = 1
@@ -96,7 +96,7 @@ Partial Class frmLogin
         'txtUsername
         '
         Me.txtUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsername.Location = New System.Drawing.Point(172, 176)
+        Me.txtUsername.Location = New System.Drawing.Point(239, 212)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(195, 24)
         Me.txtUsername.TabIndex = 1
@@ -105,7 +105,7 @@ Partial Class frmLogin
         'txtPassword
         '
         Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.Location = New System.Drawing.Point(172, 215)
+        Me.txtPassword.Location = New System.Drawing.Point(239, 255)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(195, 24)
         Me.txtPassword.TabIndex = 2
@@ -115,7 +115,7 @@ Partial Class frmLogin
         'btnExit
         '
         Me.btnExit.Image = CType(resources.GetObject("btnExit.Image"), System.Drawing.Image)
-        Me.btnExit.Location = New System.Drawing.Point(272, 253)
+        Me.btnExit.Location = New System.Drawing.Point(339, 297)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(95, 33)
         Me.btnExit.TabIndex = 4
@@ -127,7 +127,7 @@ Partial Class frmLogin
         'btnLogin
         '
         Me.btnLogin.Image = CType(resources.GetObject("btnLogin.Image"), System.Drawing.Image)
-        Me.btnLogin.Location = New System.Drawing.Point(172, 253)
+        Me.btnLogin.Location = New System.Drawing.Point(239, 297)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(95, 33)
         Me.btnLogin.TabIndex = 3
@@ -139,7 +139,7 @@ Partial Class frmLogin
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(13, 13)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(166, 50)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -149,10 +149,10 @@ Partial Class frmLogin
         'lblHuongDan
         '
         Me.lblHuongDan.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHuongDan.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblHuongDan.ForeColor = System.Drawing.Color.Black
         Me.lblHuongDan.Image = CType(resources.GetObject("lblHuongDan.Image"), System.Drawing.Image)
         Me.lblHuongDan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblHuongDan.Location = New System.Drawing.Point(135, 321)
+        Me.lblHuongDan.Location = New System.Drawing.Point(205, 387)
         Me.lblHuongDan.Name = "lblHuongDan"
         Me.lblHuongDan.Size = New System.Drawing.Size(191, 25)
         Me.lblHuongDan.TabIndex = 5
@@ -162,10 +162,10 @@ Partial Class frmLogin
         'lblTaoAccount
         '
         Me.lblTaoAccount.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTaoAccount.ForeColor = System.Drawing.SystemColors.Control
+        Me.lblTaoAccount.ForeColor = System.Drawing.Color.Black
         Me.lblTaoAccount.Image = CType(resources.GetObject("lblTaoAccount.Image"), System.Drawing.Image)
         Me.lblTaoAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblTaoAccount.Location = New System.Drawing.Point(169, 296)
+        Me.lblTaoAccount.Location = New System.Drawing.Point(232, 349)
         Me.lblTaoAccount.Name = "lblTaoAccount"
         Me.lblTaoAccount.Size = New System.Drawing.Size(129, 25)
         Me.lblTaoAccount.TabIndex = 5
@@ -176,8 +176,8 @@ Partial Class frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(460, 355)
+        Me.BackColor = System.Drawing.Color.Silver
+        Me.ClientSize = New System.Drawing.Size(601, 444)
         Me.Controls.Add(Me.lblTaoAccount)
         Me.Controls.Add(Me.lblHuongDan)
         Me.Controls.Add(Me.btnExit)

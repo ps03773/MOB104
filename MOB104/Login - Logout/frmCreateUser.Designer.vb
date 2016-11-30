@@ -35,6 +35,10 @@ Partial Class frmCreateUser
         Me.btnNhaplai = New System.Windows.Forms.Button()
         Me.btnXacnhan = New System.Windows.Forms.Button()
         Me.lblDifference = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -52,8 +56,8 @@ Partial Class frmCreateUser
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(89, 12)
+        Me.Label1.ForeColor = System.Drawing.Color.Red
+        Me.Label1.Location = New System.Drawing.Point(133, 12)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(237, 31)
         Me.Label1.TabIndex = 7
@@ -65,14 +69,14 @@ Partial Class frmCreateUser
         Me.txtUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUsername.Location = New System.Drawing.Point(182, 99)
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(138, 22)
+        Me.txtUsername.Size = New System.Drawing.Size(272, 22)
         Me.txtUsername.TabIndex = 1
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(28, 100)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(123, 18)
@@ -84,8 +88,8 @@ Partial Class frmCreateUser
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label3.Location = New System.Drawing.Point(28, 128)
+        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.Location = New System.Drawing.Point(28, 129)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(82, 18)
         Me.Label3.TabIndex = 7
@@ -95,9 +99,9 @@ Partial Class frmCreateUser
         'txtPassword
         '
         Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.Location = New System.Drawing.Point(182, 127)
+        Me.txtPassword.Location = New System.Drawing.Point(182, 128)
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(138, 22)
+        Me.txtPassword.Size = New System.Drawing.Size(272, 22)
         Me.txtPassword.TabIndex = 2
         Me.txtPassword.UseSystemPasswordChar = True
         '
@@ -105,8 +109,8 @@ Partial Class frmCreateUser
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label4.Location = New System.Drawing.Point(28, 156)
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(28, 158)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(148, 18)
         Me.Label4.TabIndex = 7
@@ -116,9 +120,9 @@ Partial Class frmCreateUser
         'txtRe_password
         '
         Me.txtRe_password.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtRe_password.Location = New System.Drawing.Point(182, 155)
+        Me.txtRe_password.Location = New System.Drawing.Point(182, 157)
         Me.txtRe_password.Name = "txtRe_password"
-        Me.txtRe_password.Size = New System.Drawing.Size(138, 22)
+        Me.txtRe_password.Size = New System.Drawing.Size(272, 22)
         Me.txtRe_password.TabIndex = 3
         Me.txtRe_password.UseSystemPasswordChar = True
         '
@@ -127,7 +131,7 @@ Partial Class frmCreateUser
         Me.btnHuy.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnHuy.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnHuy.Image = CType(resources.GetObject("btnHuy.Image"), System.Drawing.Image)
-        Me.btnHuy.Location = New System.Drawing.Point(229, 198)
+        Me.btnHuy.Location = New System.Drawing.Point(299, 293)
         Me.btnHuy.Name = "btnHuy"
         Me.btnHuy.Size = New System.Drawing.Size(91, 31)
         Me.btnHuy.TabIndex = 9
@@ -140,7 +144,7 @@ Partial Class frmCreateUser
         Me.btnNhaplai.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNhaplai.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnNhaplai.Image = CType(resources.GetObject("btnNhaplai.Image"), System.Drawing.Image)
-        Me.btnNhaplai.Location = New System.Drawing.Point(31, 198)
+        Me.btnNhaplai.Location = New System.Drawing.Point(101, 293)
         Me.btnNhaplai.Name = "btnNhaplai"
         Me.btnNhaplai.Size = New System.Drawing.Size(91, 31)
         Me.btnNhaplai.TabIndex = 4
@@ -153,7 +157,7 @@ Partial Class frmCreateUser
         Me.btnXacnhan.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnXacnhan.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnXacnhan.Image = CType(resources.GetObject("btnXacnhan.Image"), System.Drawing.Image)
-        Me.btnXacnhan.Location = New System.Drawing.Point(130, 198)
+        Me.btnXacnhan.Location = New System.Drawing.Point(200, 293)
         Me.btnXacnhan.Name = "btnXacnhan"
         Me.btnXacnhan.Size = New System.Drawing.Size(91, 31)
         Me.btnXacnhan.TabIndex = 9
@@ -164,20 +168,60 @@ Partial Class frmCreateUser
         'lblDifference
         '
         Me.lblDifference.AutoSize = True
-        Me.lblDifference.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDifference.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(163, Byte))
         Me.lblDifference.ForeColor = System.Drawing.Color.Red
-        Me.lblDifference.Location = New System.Drawing.Point(179, 180)
+        Me.lblDifference.Location = New System.Drawing.Point(179, 188)
         Me.lblDifference.Name = "lblDifference"
-        Me.lblDifference.Size = New System.Drawing.Size(125, 15)
+        Me.lblDifference.Size = New System.Drawing.Size(135, 16)
         Me.lblDifference.TabIndex = 10
         Me.lblDifference.Text = "Mật khẩu không khớp"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.Location = New System.Drawing.Point(28, 217)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(63, 18)
+        Me.Label5.TabIndex = 7
+        Me.Label5.Text = "Họ tên:"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(182, 216)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(272, 22)
+        Me.TextBox1.TabIndex = 1
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.Location = New System.Drawing.Point(28, 246)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(55, 18)
+        Me.Label6.TabIndex = 7
+        Me.Label6.Text = "Email:"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(182, 245)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(272, 22)
+        Me.TextBox2.TabIndex = 1
         '
         'frmCreateUser
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(350, 243)
+        Me.BackColor = System.Drawing.Color.Silver
+        Me.ClientSize = New System.Drawing.Size(494, 338)
         Me.Controls.Add(Me.lblDifference)
         Me.Controls.Add(Me.btnXacnhan)
         Me.Controls.Add(Me.btnNhaplai)
@@ -186,6 +230,10 @@ Partial Class frmCreateUser
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -214,4 +262,8 @@ Partial Class frmCreateUser
     Friend WithEvents btnNhaplai As Button
     Friend WithEvents btnXacnhan As Button
     Friend WithEvents lblDifference As Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
 End Class

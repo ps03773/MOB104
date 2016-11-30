@@ -32,7 +32,7 @@ Partial Class frmLogout
         '
         'btnDongy
         '
-        Me.btnDongy.Location = New System.Drawing.Point(30, 91)
+        Me.btnDongy.Location = New System.Drawing.Point(71, 97)
         Me.btnDongy.Name = "btnDongy"
         Me.btnDongy.Size = New System.Drawing.Size(98, 34)
         Me.btnDongy.TabIndex = 1
@@ -42,8 +42,8 @@ Partial Class frmLogout
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label1.Location = New System.Drawing.Point(91, 12)
+        Me.Label1.ForeColor = System.Drawing.Color.Red
+        Me.Label1.Location = New System.Drawing.Point(83, 12)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(190, 61)
         Me.Label1.TabIndex = 1
@@ -52,7 +52,7 @@ Partial Class frmLogout
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(21, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(58, 61)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -61,7 +61,7 @@ Partial Class frmLogout
         '
         'btnHuy
         '
-        Me.btnHuy.Location = New System.Drawing.Point(159, 91)
+        Me.btnHuy.Location = New System.Drawing.Point(175, 97)
         Me.btnHuy.Name = "btnHuy"
         Me.btnHuy.Size = New System.Drawing.Size(98, 34)
         Me.btnHuy.TabIndex = 2
@@ -72,8 +72,8 @@ Partial Class frmLogout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(287, 144)
+        Me.BackColor = System.Drawing.Color.Silver
+        Me.ClientSize = New System.Drawing.Size(285, 151)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnHuy)
