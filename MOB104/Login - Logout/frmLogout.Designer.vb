@@ -32,7 +32,7 @@ Partial Class frmLogout
         '
         'btnDongy
         '
-        Me.btnDongy.Location = New System.Drawing.Point(71, 97)
+        Me.btnDongy.Location = New System.Drawing.Point(71, 100)
         Me.btnDongy.Name = "btnDongy"
         Me.btnDongy.Size = New System.Drawing.Size(98, 34)
         Me.btnDongy.TabIndex = 1
@@ -61,7 +61,7 @@ Partial Class frmLogout
         '
         'btnHuy
         '
-        Me.btnHuy.Location = New System.Drawing.Point(175, 97)
+        Me.btnHuy.Location = New System.Drawing.Point(175, 100)
         Me.btnHuy.Name = "btnHuy"
         Me.btnHuy.Size = New System.Drawing.Size(98, 34)
         Me.btnHuy.TabIndex = 2

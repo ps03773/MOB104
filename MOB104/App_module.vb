@@ -6,15 +6,15 @@ Module App_module
     Public Username As String
     Public Password As String
     '(Kết nối đến Database
-    Public _ConnectionString As String = "workstation id=QLBH-PS03773.mssql.somee.com;packet size=4096;user id=quanghuy;pwd=yuurye1996;data source=QLBH-PS03773.mssql.somee.com;persist security info=False;initial catalog=QLBH-PS03773"
+    Public _ConnectionString As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True"
     Public Connect As SqlConnection = New SqlConnection(_ConnectionString)
     ')
     Public Dadapter As SqlDataAdapter ' Gửi các truy vấn đến Database
     Public Edata As New DataTable
 
-    ' Đọc dữ liệu từ bảng KHACH_HANG
-    Public Function LoadKH() As DataSet
-        Dadapter = New SqlDataAdapter("Select Ma_KH as 'Mã KH' , Ho_ten_KH as 'Tên khách hàng', Case Gioi_tinh When 1 then N'Nam' else N'Nữ' End as 'Giới tính', Dia_chi as 'Địa chỉ',  SDT as 'SĐT' From KHACH_HANG", Connect)
+    ' Đọc dữ liệu từ bảng SAN_PHAM
+    Public Function LoadSP() As DataSet
+        Dadapter = New SqlDataAdapter("Select SO_SERI as 'Số Seri' , MA_SP as 'Mã sản phẩm', TEN_SP as 'Tên sản phẩm', NHAN_HIEU as 'Nhãn hiệu',  CHIP as 'Chip xử lí', RAM as 'Bộ nhớ RAM', HDD_SSD as 'HDD/SSD', GIA as 'Giá', BAO_HANH_THANG as 'Bảo hành (Tháng)', TRANG_THAI as 'Trạng thái', MA_DL as 'Mã đại lí' From SAN_PHAM", Connect)
         Dim db As New DataSet
         Connect.Open()
         Dadapter.Fill(db)
@@ -23,7 +23,7 @@ Module App_module
     End Function
 
     ' Đọc dữ liệu từ bảng SAN_PHAM
-    Public Function LoadSP() As DataSet
+    Public Function LoadKH() As DataSet
         Dadapter = New SqlDataAdapter("Select Ma_SP as 'Mã SP' , Ten_SP as 'Tên sản phẩm', Loai_san_pham as 'Loại sản phẩm', SAN_PHAM.Ma_loai as 'Mã loại', Convert(Date,Ngay_nhap,105) as 'Ngày nhập', Don_gia as 'Đơn giá', SL_ton_kho as 'SL tồn kho' From SAN_PHAM join LOAI_SAN_PHAM on SAN_PHAM.Ma_loai = LOAI_SAN_PHAM.Ma_loai", Connect)
         Dim db As New DataSet
         Connect.Open()
