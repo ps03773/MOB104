@@ -14,7 +14,7 @@ Module App_module
 
     ' Đọc dữ liệu từ bảng SAN_PHAM
     Public Function LoadSP() As DataSet
-        Dadapter = New SqlDataAdapter("Select SO_SERI as 'Số Seri' , MA_SP as 'Mã sản phẩm', TEN_SP as 'Tên sản phẩm', NHAN_HIEU as 'Nhãn hiệu',  CHIP as 'Chip xử lí', RAM as 'Bộ nhớ RAM', HDD_SSD as 'HDD/SSD', GIA as 'Giá', BAO_HANH_THANG as 'Bảo hành (Tháng)', TRANG_THAI as 'Trạng thái', MA_DL as 'Mã đại lí' From SAN_PHAM", Connect)
+        Dadapter = New SqlDataAdapter("Select SO_SERI as 'Số Seri' , MA_SP as 'Mã sản phẩm', TEN_SP as 'Tên sản phẩm', NHAN_HIEU as 'Nhãn hiệu',  CHIP as 'Chip xử lí', RAM as 'Bộ nhớ RAM', HDD_SSD as 'HDD/SSD', GIA as 'Giá', BAO_HANH_THANG as 'Bảo hành (Tháng)', TRANG_THAI as 'Trạng thái', MA_DL as 'Mã đại lí' From SAN_PHAM join DAI_LI on SAN_PHAM.MA_DL = DAI_LI.MA_DL", Connect)
         Dim db As New DataSet
         Connect.Open()
         Dadapter.Fill(db)
