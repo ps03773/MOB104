@@ -16,14 +16,12 @@ Public Class frmChangeProPic
         Try
             Connect.Open()
             Dadapter.Fill(ds)
-            Dim c As Integer = ds.Rows.Count 'Đếm số dòng của kết quả trả về từ truy vấn
-            If c > 0 Then 'Nếu có kết quả trả về => SP có trong table ANH_SAN_PHAM => vô hiệu hóa nút Add, cho phép đổi ảnh, xóa record
+            If IsDBNull(ds.Rows(0)("HINH")) = False Then 'Nếu có kết quả trả về => SP có trong table ANH_SAN_PHAM => vô hiệu hóa nút Add, cho phép đổi ảnh, xóa record
                 btnAdd.Enabled = False
                 btnDoi.Enabled = True
                 btnXoa.Enabled = True
                 '(Đọc dữ liệu trong cột Anh_SP, table ANH_SAN_PHAM
-                Dim bytImage() As Byte =
-                    ds.Rows(c - 1)("HINH")
+                Dim bytImage() As Byte = ds.Rows(0)("HINH")
                 ')
                 Dim stmImage As New MemoryStream(bytImage) 'Lưu ảnh vào bộ nhớ
                 '(Hiển thị ảnh lên PictureBox

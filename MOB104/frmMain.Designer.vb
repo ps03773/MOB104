@@ -38,6 +38,7 @@ Partial Class frmMain
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -169,6 +170,7 @@ Partial Class frmMain
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
@@ -176,57 +178,67 @@ Partial Class frmMain
         Me.GroupBox1.Controls.Add(Me.PictureBox3)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 146)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 129)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(356, 212)
+        Me.GroupBox1.Size = New System.Drawing.Size(356, 235)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Sinh viên thực hiện:"
+        Me.GroupBox1.Text = "Nhóm thực hiện: NHÓM 1"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(166, 172)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(84, 18)
+        Me.Label7.TabIndex = 1
+        Me.Label7.Text = "Long Trần"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(153, 132)
+        Me.Label5.Location = New System.Drawing.Point(166, 140)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(144, 18)
+        Me.Label5.Size = New System.Drawing.Size(115, 18)
         Me.Label5.TabIndex = 1
-        Me.Label5.Text = "GV: Lê Văn Phụng"
+        Me.Label5.Text = "Trần Sơn Bình"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(154, 103)
+        Me.Label4.Location = New System.Drawing.Point(166, 108)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(112, 18)
+        Me.Label4.Size = New System.Drawing.Size(101, 18)
         Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Lớp: PT11101"
+        Me.Label4.Text = "Lê Tuấn Anh"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(154, 73)
+        Me.Label3.Location = New System.Drawing.Point(166, 76)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(131, 18)
+        Me.Label3.Size = New System.Drawing.Size(159, 18)
         Me.Label3.TabIndex = 1
-        Me.Label3.Text = "MSSV: PS03773"
+        Me.Label3.Text = "Huy Dương (Leader)"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(154, 44)
+        Me.Label2.Location = New System.Drawing.Point(166, 44)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(184, 18)
+        Me.Label2.Size = New System.Drawing.Size(111, 18)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Dương Trần Quang Huy"
+        Me.Label2.Text = "THÀNH VIÊN:"
         '
         'PictureBox3
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(6, 25)
+        Me.PictureBox3.Location = New System.Drawing.Point(13, 25)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(139, 166)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -299,7 +311,6 @@ Partial Class frmMain
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents DanhMụcSảnPhẩmToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -308,4 +319,6 @@ Partial Class frmMain
     Friend WithEvents MenuItemCNKH As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents lblUser As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 End Class

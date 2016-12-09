@@ -4,6 +4,8 @@ Public Class frmCreateUser
         txtUsername.Clear()
         txtPassword.Clear()
         txtRe_password.Clear()
+        txtFullName.Clear()
+        txtEmail.Clear()
         lblDifference.Hide()
     End Sub
 
@@ -11,6 +13,8 @@ Public Class frmCreateUser
         txtUsername.Clear()
         txtPassword.Clear()
         txtRe_password.Clear()
+        txtFullName.Clear()
+        txtEmail.Clear()
     End Sub
 
     Private Sub btnXacnhan_Click(sender As Object, e As EventArgs) Handles btnXacnhan.Click
@@ -21,21 +25,28 @@ Public Class frmCreateUser
             Dadapter.Fill(db)
             If db.Rows.Count > 0 Then
                 MessageBox.Show("Tên tài khoản đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            ElseIf txtPassword.Text = "" Or txtPassword.Text = "" Or txtRe_password.Text = "" Then
+            ElseIf txtUsername.Text = "" Or txtPassword.Text = "" Or txtRe_password.Text = "" Or txtFullName.Text = "" Or txtEmail.Text = "" Then
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             ElseIf txtRe_password.Text <> txtRe_password.Text Then
                 MessageBox.Show("Mật khẩu không khớp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             ElseIf Len(txtPassword.Text) < 5 Then
-                MessageBox.Show("Mật khẩu không đủ độ dài" & vbCrLf &
-                                "Vui lòng nhập mật khẩu có từ 5 ký tự trở lên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show("Mật khẩu không hợp lệ" & vbCrLf &
+                                "Vui lòng nhập mật khẩu gồm 5 -> 12 ký tự", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            ElseIf Len(txtPassword.Text) > 12 Then
+                MessageBox.Show("Mật khẩu không hợp lệ" & vbCrLf &
+                                "Vui lòng nhập mật khẩu gồm 5 -> 12 ký tự", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            ElseIf txtEmail.Text.Contains("@") = False Or txtEmail.Text.Contains(".com") = False Then
+                MessageBox.Show("Email không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Else
-                Dim Sqlquery As String = "Insert Into LOGIN_USER Values( '" & txtUsername.Text & "', '" & txtPassword.Text & "')"
+                Dim Sqlquery As String = "Insert Into LOGIN_USER Values( '" & txtUsername.Text & "', '" & txtPassword.Text & "', '" & txtFullName.Text & "', '" & txtEmail.Text & "')"
                 Dim cmd As New SqlCommand(Sqlquery, Connect)
                 cmd.ExecuteNonQuery()
                 MessageBox.Show("Tài khoản của bạn đã được tạo", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 txtUsername.Clear()
                 txtPassword.Clear()
                 txtRe_password.Clear()
+                txtFullName.Clear()
+                txtEmail.Clear()
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error)

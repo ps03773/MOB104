@@ -36,9 +36,9 @@ Partial Class frmCreateUser
         Me.btnXacnhan = New System.Windows.Forms.Button()
         Me.lblDifference = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtFullName = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -134,7 +134,7 @@ Partial Class frmCreateUser
         Me.btnHuy.Location = New System.Drawing.Point(299, 293)
         Me.btnHuy.Name = "btnHuy"
         Me.btnHuy.Size = New System.Drawing.Size(91, 31)
-        Me.btnHuy.TabIndex = 9
+        Me.btnHuy.TabIndex = 8
         Me.btnHuy.Text = "Hủy"
         Me.btnHuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnHuy.UseVisualStyleBackColor = True
@@ -147,7 +147,7 @@ Partial Class frmCreateUser
         Me.btnNhaplai.Location = New System.Drawing.Point(101, 293)
         Me.btnNhaplai.Name = "btnNhaplai"
         Me.btnNhaplai.Size = New System.Drawing.Size(91, 31)
-        Me.btnNhaplai.TabIndex = 4
+        Me.btnNhaplai.TabIndex = 7
         Me.btnNhaplai.Text = "Nhập lại"
         Me.btnNhaplai.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnNhaplai.UseVisualStyleBackColor = True
@@ -160,7 +160,7 @@ Partial Class frmCreateUser
         Me.btnXacnhan.Location = New System.Drawing.Point(200, 293)
         Me.btnXacnhan.Name = "btnXacnhan"
         Me.btnXacnhan.Size = New System.Drawing.Size(91, 31)
-        Me.btnXacnhan.TabIndex = 9
+        Me.btnXacnhan.TabIndex = 6
         Me.btnXacnhan.Text = "Xác nhận"
         Me.btnXacnhan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnXacnhan.UseVisualStyleBackColor = True
@@ -188,13 +188,13 @@ Partial Class frmCreateUser
         Me.Label5.Text = "Họ tên:"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'TextBox1
+        'txtFullName
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(182, 216)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(272, 22)
-        Me.TextBox1.TabIndex = 1
+        Me.txtFullName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFullName.Location = New System.Drawing.Point(182, 216)
+        Me.txtFullName.Name = "txtFullName"
+        Me.txtFullName.Size = New System.Drawing.Size(272, 22)
+        Me.txtFullName.TabIndex = 4
         '
         'Label6
         '
@@ -208,13 +208,13 @@ Partial Class frmCreateUser
         Me.Label6.Text = "Email:"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'TextBox2
+        'txtEmail
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(182, 245)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(272, 22)
-        Me.TextBox2.TabIndex = 1
+        Me.txtEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmail.Location = New System.Drawing.Point(182, 245)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(272, 22)
+        Me.txtEmail.TabIndex = 5
         '
         'frmCreateUser
         '
@@ -230,9 +230,9 @@ Partial Class frmCreateUser
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtEmail)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtFullName)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.Label2)
@@ -263,7 +263,7 @@ Partial Class frmCreateUser
     Friend WithEvents btnXacnhan As Button
     Friend WithEvents lblDifference As Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtFullName As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtEmail As System.Windows.Forms.TextBox
 End Class

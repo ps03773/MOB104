@@ -32,8 +32,17 @@ Partial Class frmEdit_ProductList
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtHDD = New System.Windows.Forms.TextBox()
+        Me.txtMaDL = New System.Windows.Forms.TextBox()
+        Me.txtTrangthai = New System.Windows.Forms.TextBox()
+        Me.txtBaohanh = New System.Windows.Forms.TextBox()
         Me.txtGia = New System.Windows.Forms.TextBox()
         Me.txtRAM = New System.Windows.Forms.TextBox()
+        Me.txtChip = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.txtNhanhieu = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtTenSP = New System.Windows.Forms.TextBox()
@@ -41,6 +50,8 @@ Partial Class frmEdit_ProductList
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtSoSR = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.txtMaSP = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -49,17 +60,6 @@ Partial Class frmEdit_ProductList
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.KhungAnh = New System.Windows.Forms.PictureBox()
         Me.btnThaoTac = New System.Windows.Forms.Button()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtSoSR = New System.Windows.Forms.TextBox()
-        Me.txtChip = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.txtHDD = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.txtBaohanh = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.txtTrangthai = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.txtMaDL = New System.Windows.Forms.TextBox()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -78,7 +78,7 @@ Partial Class frmEdit_ProductList
         Me.GroupBox2.Controls.Add(Me.btnAdd)
         Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.ForeColor = System.Drawing.SystemColors.Control
+        Me.GroupBox2.ForeColor = System.Drawing.Color.Black
         Me.GroupBox2.Location = New System.Drawing.Point(741, 90)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(192, 241)
@@ -207,13 +207,49 @@ Partial Class frmEdit_ProductList
         Me.GroupBox1.Controls.Add(Me.txtMaSP)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.Control
+        Me.GroupBox1.ForeColor = System.Drawing.Color.Black
         Me.GroupBox1.Location = New System.Drawing.Point(196, 90)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(539, 241)
         Me.GroupBox1.TabIndex = 24
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Thông tin sản phẩm"
+        '
+        'txtHDD
+        '
+        Me.txtHDD.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtHDD.Location = New System.Drawing.Point(367, 28)
+        Me.txtHDD.Name = "txtHDD"
+        Me.txtHDD.Size = New System.Drawing.Size(160, 22)
+        Me.txtHDD.TabIndex = 6
+        Me.txtHDD.TabStop = False
+        '
+        'txtMaDL
+        '
+        Me.txtMaDL.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMaDL.Location = New System.Drawing.Point(367, 171)
+        Me.txtMaDL.Name = "txtMaDL"
+        Me.txtMaDL.Size = New System.Drawing.Size(160, 22)
+        Me.txtMaDL.TabIndex = 6
+        Me.txtMaDL.TabStop = False
+        '
+        'txtTrangthai
+        '
+        Me.txtTrangthai.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTrangthai.Location = New System.Drawing.Point(367, 136)
+        Me.txtTrangthai.Name = "txtTrangthai"
+        Me.txtTrangthai.Size = New System.Drawing.Size(160, 22)
+        Me.txtTrangthai.TabIndex = 6
+        Me.txtTrangthai.TabStop = False
+        '
+        'txtBaohanh
+        '
+        Me.txtBaohanh.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBaohanh.Location = New System.Drawing.Point(367, 99)
+        Me.txtBaohanh.Name = "txtBaohanh"
+        Me.txtBaohanh.Size = New System.Drawing.Size(160, 22)
+        Me.txtBaohanh.TabIndex = 6
+        Me.txtBaohanh.TabStop = False
         '
         'txtGia
         '
@@ -231,6 +267,50 @@ Partial Class frmEdit_ProductList
         Me.txtRAM.Name = "txtRAM"
         Me.txtRAM.Size = New System.Drawing.Size(160, 22)
         Me.txtRAM.TabIndex = 5
+        '
+        'txtChip
+        '
+        Me.txtChip.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtChip.Location = New System.Drawing.Point(97, 171)
+        Me.txtChip.Name = "txtChip"
+        Me.txtChip.Size = New System.Drawing.Size(160, 22)
+        Me.txtChip.TabIndex = 3
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(274, 172)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(76, 18)
+        Me.Label13.TabIndex = 0
+        Me.Label13.Text = "Mã đại lí:"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(274, 137)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(88, 18)
+        Me.Label12.TabIndex = 0
+        Me.Label12.Text = "Trạng thái:"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(274, 29)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(88, 18)
+        Me.Label10.TabIndex = 0
+        Me.Label10.Text = "HDD/SSD:"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(274, 100)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(84, 18)
+        Me.Label11.TabIndex = 0
+        Me.Label11.Text = "Bảo hành:"
         '
         'txtNhanhieu
         '
@@ -293,6 +373,24 @@ Partial Class frmEdit_ProductList
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Nhãn hiệu:"
         '
+        'txtSoSR
+        '
+        Me.txtSoSR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSoSR.Location = New System.Drawing.Point(97, 27)
+        Me.txtSoSR.Name = "txtSoSR"
+        Me.txtSoSR.Size = New System.Drawing.Size(160, 22)
+        Me.txtSoSR.TabIndex = 1
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(7, 29)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(64, 18)
+        Me.Label9.TabIndex = 0
+        Me.Label9.Text = "Số Seri"
+        '
         'txtMaSP
         '
         Me.txtMaSP.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -315,7 +413,7 @@ Partial Class frmEdit_ProductList
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(89, 12)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(317, 31)
@@ -356,7 +454,7 @@ Partial Class frmEdit_ProductList
         Me.GroupBox3.Controls.Add(Me.KhungAnh)
         Me.GroupBox3.Controls.Add(Me.btnThaoTac)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.ForeColor = System.Drawing.SystemColors.Control
+        Me.GroupBox3.ForeColor = System.Drawing.Color.Black
         Me.GroupBox3.Location = New System.Drawing.Point(12, 90)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(178, 241)
@@ -366,7 +464,7 @@ Partial Class frmEdit_ProductList
         '
         'KhungAnh
         '
-        Me.KhungAnh.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.KhungAnh.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.KhungAnh.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.KhungAnh.ErrorImage = CType(resources.GetObject("KhungAnh.ErrorImage"), System.Drawing.Image)
         Me.KhungAnh.Location = New System.Drawing.Point(6, 23)
@@ -391,109 +489,11 @@ Partial Class frmEdit_ProductList
         Me.btnThaoTac.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnThaoTac.UseVisualStyleBackColor = True
         '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(7, 29)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(64, 18)
-        Me.Label9.TabIndex = 0
-        Me.Label9.Text = "Số Seri"
-        '
-        'txtSoSR
-        '
-        Me.txtSoSR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtSoSR.Location = New System.Drawing.Point(97, 27)
-        Me.txtSoSR.Name = "txtSoSR"
-        Me.txtSoSR.Size = New System.Drawing.Size(160, 22)
-        Me.txtSoSR.TabIndex = 1
-        '
-        'txtChip
-        '
-        Me.txtChip.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtChip.Location = New System.Drawing.Point(97, 171)
-        Me.txtChip.Name = "txtChip"
-        Me.txtChip.Size = New System.Drawing.Size(160, 22)
-        Me.txtChip.TabIndex = 3
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(274, 29)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(88, 18)
-        Me.Label10.TabIndex = 0
-        Me.Label10.Text = "HDD/SSD:"
-        '
-        'txtHDD
-        '
-        Me.txtHDD.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtHDD.Location = New System.Drawing.Point(367, 28)
-        Me.txtHDD.Name = "txtHDD"
-        Me.txtHDD.Size = New System.Drawing.Size(160, 22)
-        Me.txtHDD.TabIndex = 6
-        Me.txtHDD.TabStop = False
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(274, 100)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(84, 18)
-        Me.Label11.TabIndex = 0
-        Me.Label11.Text = "Bảo hành:"
-        '
-        'txtBaohanh
-        '
-        Me.txtBaohanh.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBaohanh.Location = New System.Drawing.Point(367, 99)
-        Me.txtBaohanh.Name = "txtBaohanh"
-        Me.txtBaohanh.Size = New System.Drawing.Size(160, 22)
-        Me.txtBaohanh.TabIndex = 6
-        Me.txtBaohanh.TabStop = False
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(274, 137)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(88, 18)
-        Me.Label12.TabIndex = 0
-        Me.Label12.Text = "Trạng thái:"
-        '
-        'txtTrangthai
-        '
-        Me.txtTrangthai.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTrangthai.Location = New System.Drawing.Point(367, 136)
-        Me.txtTrangthai.Name = "txtTrangthai"
-        Me.txtTrangthai.Size = New System.Drawing.Size(160, 22)
-        Me.txtTrangthai.TabIndex = 6
-        Me.txtTrangthai.TabStop = False
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(274, 172)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(76, 18)
-        Me.Label13.TabIndex = 0
-        Me.Label13.Text = "Mã đại lí:"
-        '
-        'txtMaDL
-        '
-        Me.txtMaDL.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMaDL.Location = New System.Drawing.Point(367, 171)
-        Me.txtMaDL.Name = "txtMaDL"
-        Me.txtMaDL.Size = New System.Drawing.Size(160, 22)
-        Me.txtMaDL.TabIndex = 6
-        Me.txtMaDL.TabStop = False
-        '
         'frmEdit_ProductList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.Silver
         Me.ClientSize = New System.Drawing.Size(941, 662)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox3)

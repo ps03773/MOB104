@@ -39,7 +39,7 @@ Partial Class frmChangeProPic
         '
         'KhungAnh
         '
-        Me.KhungAnh.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.KhungAnh.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.KhungAnh.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.KhungAnh.ErrorImage = CType(resources.GetObject("KhungAnh.ErrorImage"), System.Drawing.Image)
         Me.KhungAnh.Location = New System.Drawing.Point(12, 12)
@@ -63,7 +63,7 @@ Partial Class frmChangeProPic
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(234, 64)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(56, 16)
@@ -74,7 +74,7 @@ Partial Class frmChangeProPic
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(234, 93)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(63, 16)
@@ -141,7 +141,7 @@ Partial Class frmChangeProPic
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.Location = New System.Drawing.Point(226, 12)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(232, 31)
@@ -162,7 +162,7 @@ Partial Class frmChangeProPic
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.Silver
         Me.ClientSize = New System.Drawing.Size(461, 248)
         Me.Controls.Add(Me.btnXoa)
         Me.Controls.Add(Me.btnDoi)
@@ -174,6 +174,7 @@ Partial Class frmChangeProPic
         Me.Controls.Add(Me.txtSoSR)
         Me.Controls.Add(Me.txtTenSP)
         Me.Controls.Add(Me.KhungAnh)
+        Me.ForeColor = System.Drawing.Color.Black
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmChangeProPic"
