@@ -4,7 +4,7 @@ Imports System.IO
 Public Class frmEdit_ProductList
     'Sub load ảnh từ CSDL
     Private Sub Loadanh()
-        Dim Dadapter = New SqlDataAdapter("Select * From ANH_SAN_PHAM Where Ma_SP = '" & txtMaSP.Text & "'", Connect)
+        Dim Dadapter = New SqlDataAdapter("Select HINH From SAN_PHAM Where SO_SERI = '" & txtSoSR.Text & "'", Connect)
         Dim ds As New DataTable
         Try
             Connect.Open()
@@ -13,7 +13,7 @@ Public Class frmEdit_ProductList
             If c > 0 Then 'Nếu có kết quả
                 '(Load ảnh vào bộ nhớ
                 Dim bytImage() As Byte =
-                    ds.Rows(c - 1)("Anh_SP")
+                    ds.Rows(c - 1)("HINH")
                 Dim stmImage As New MemoryStream(bytImage)
                 ')
                 KhungAnh.SizeMode = PictureBoxSizeMode.Zoom
@@ -36,11 +36,17 @@ Public Class frmEdit_ProductList
         dgvSP.DataSource = LoadSP.Tables(0) 'Load dữ liệu vào DataGridView
         btnHuy.Hide()
         '(Xóa kí tự trong Textbox
+        txtSoSR.Clear()
         txtMaSP.Clear()
         txtTenSP.Clear()
-        txtMaLoai.Clear()
-        txtDongia.Clear()
-        txtTonKho.Clear()
+        txtNhanhieu.Clear()
+        txtChip.Clear()
+        txtRAM.Clear()
+        txtHDD.Clear()
+        txtGia.Clear()
+        txtBaohanh.Clear()
+        txtTrangthai.Clear()
+        txtMaDL.Clear()
         ')
     End Sub
 
@@ -49,12 +55,17 @@ Public Class frmEdit_ProductList
         '(Nếu có ô được click
         If dgvSP.SelectedCells.Count > 0 Then
             '(Dữ liệu hiển thị trên các Textbox và DateTimePicker sẽ lần lượt là từng cột trong cùng một hàng DataGridView
-            txtMaSP.Text = dgvSP.CurrentRow.Cells(0).Value.ToString
-            txtTenSP.Text = dgvSP.CurrentRow.Cells(1).Value.ToString
-            txtMaLoai.Text = dgvSP.CurrentRow.Cells(3).Value.ToString
-            dtpNgayNhap.Value = dgvSP.CurrentRow.Cells(4).Value.ToString
-            txtDongia.Text = dgvSP.CurrentRow.Cells(5).Value.ToString
-            txtTonKho.Text = dgvSP.CurrentRow.Cells(6).Value.ToString
+            txtSoSR.Text = dgvSP.CurrentRow.Cells(0).Value.ToString
+            txtMaSP.Text = dgvSP.CurrentRow.Cells(1).Value.ToString
+            txtTenSP.Text = dgvSP.CurrentRow.Cells(2).Value.ToString
+            txtNhanhieu.Text = dgvSP.CurrentRow.Cells(3).Value.ToString
+            txtChip.Text = dgvSP.CurrentRow.Cells(4).Value.ToString
+            txtRAM.Text = dgvSP.CurrentRow.Cells(5).Value.ToString
+            txtHDD.Text = dgvSP.CurrentRow.Cells(6).Value.ToString
+            txtGia.Text = dgvSP.CurrentRow.Cells(7).Value.ToString
+            txtBaohanh.Text = dgvSP.CurrentRow.Cells(8).Value.ToString
+            txtTrangthai.Text = dgvSP.CurrentRow.Cells(9).Value.ToString
+            txtMaDL.Text = dgvSP.CurrentRow.Cells(10).Value.ToString
             ')
 
             'Chúng ta sẽ gọi sub load ảnh từ CSDL
@@ -76,15 +87,15 @@ Public Class frmEdit_ProductList
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Dim db As New DataTable
-        Dadapter = New SqlDataAdapter("Select Ma_SP From SAN_PHAM Where Ma_SP = '" & txtMaSP.Text & "'", Connect)
-        Dim Dadapter2 As SqlDataAdapter = New SqlDataAdapter("Select Ma_loai From LOAI_SAN_PHAM Where Ma_loai = '" & txtMaLoai.Text & "'", Connect)
+        Dadapter = New SqlDataAdapter("Select SO_SERI From SAN_PHAM Where SO_SERI = '" & txtSoSR.Text & "'", Connect)
+        Dim Dadapter2 As SqlDataAdapter = New SqlDataAdapter("Select Ma_DL From DAI_LY Where Ma_DL = '" & txtMaDL.Text & "'", Connect)
         Dim db2 As New DataTable
 
         Try
             Connect.Open()
             db2.Clear()
             Dadapter2.Fill(db2)
-            If txtMaSP.Text = "" Or txtTenSP.Text = "" Or txtMaLoai.Text = "" Or txtDongia.Text = "" Or txtTonKho.Text = "" Then
+            If txtSoSR.Text = "" Or txtMaSP.Text = "" Or txtTenSP.Text = "" Or txtNhanhieu.Text = "" Or txtChip.Text = "" Or txtRAM.Text = "" Or txtHDD.Text = "" Or txtGia.Text = "" Or txtBaohanh.Text = "" Or txtTrangthai.Text = "" Or txtMaDL.Text = "" Then
                 MessageBox.Show("Vui lòng nhập đủ thông tin", "Nhập thiếu", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             ElseIf txtMaSP.Text.Contains("SP") = False Or Len(txtMaSP.Text) <> 6 Then
                 MessageBox.Show _
@@ -92,20 +103,24 @@ Public Class frmEdit_ProductList
                 txtMaSP.Text = ""
                 txtMaSP.Focus()
             ElseIf db2.Rows.Count = 0 Then
-                MessageBox.Show("Mã loại không hợp lệ" & vbCrLf & "Vui lòng tra cứu mã loại trước khi nhập", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-            ElseIf IsNumeric(txtDongia.Text) = False Then
+                MessageBox.Show("Mã đại lí không đúng" & vbCrLf & "Vui lòng tra cứu mã đại lí trước khi nhập", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            ElseIf IsNumeric(txtGia.Text) = False Then
                 MessageBox.Show _
                     ("Vui lòng nhập số vào đơn giá", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                txtDongia.Focus()
-            ElseIf IsNumeric(txtTonKho.Text) = False Then
+                txtGia.Focus()
+            ElseIf IsNumeric(txtBaohanh.Text) = False Then
                 MessageBox.Show _
-                    ("Vui lòng nhập số vào SL tồn kho", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
-                txtTonKho.Focus()
+                    ("Vui lòng nhập số vào ô bảo hành", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                txtBaohanh.Focus()
+            ElseIf txtTrangthai.Text <> "Con" Or txtTrangthai.Text <> "Het" Then
+                MessageBox.Show _
+                    ("Trạng thái chỉ được nhập [Con/Het]", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                txtTrangthai.Focus()
             Else
                 db.Clear()
                 Dadapter.Fill(db)
                 If db.Rows.Count > 0 Then
-                    MessageBox.Show("Trùng mã SP", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    MessageBox.Show("Trùng số seri", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     txtMaSP.Focus()
                 Else
                     frmProAddConfirm.ShowDialog()
@@ -154,14 +169,14 @@ Public Class frmEdit_ProductList
     Private Sub btnSua_Click(sender As Object, e As EventArgs) Handles btnSua.Click
         Dim db As New DataTable
         Dadapter = New SqlDataAdapter("Select Ma_SP From SAN_PHAM Where Ma_SP = '" & txtMaSP.Text & "'", Connect)
-        Dim Dadapter2 As SqlDataAdapter = New SqlDataAdapter("Select Ma_loai From LOAI_SAN_PHAM Where Ma_loai = '" & txtMaLoai.Text & "'", Connect)
+        Dim Dadapter2 As SqlDataAdapter = New SqlDataAdapter("Select Ma_loai From LOAI_SAN_PHAM Where Ma_loai = '" & txtNhanhieu.Text & "'", Connect)
         Dim db2 As New DataTable
 
         Try
             Connect.Open()
             db2.Clear()
             Dadapter2.Fill(db2)
-            If txtMaSP.Text = "" Or txtTenSP.Text = "" Or txtMaLoai.Text = "" Or txtDongia.Text = "" Or txtTonKho.Text = "" Then
+            If txtMaSP.Text = "" Or txtTenSP.Text = "" Or txtNhanhieu.Text = "" Or txtRAM.Text = "" Or txtGia.Text = "" Then
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Nhập thiếu", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             Else
                 db.Clear()
@@ -182,11 +197,11 @@ Public Class frmEdit_ProductList
                             MessageBox.Show("Mã loại không hợp lệ" & vbCrLf & "Vui lòng tra cứu mã loại trước khi nhập", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                         Else
                             Update.Parameters.AddWithValue("@MaSP", txtMaSP.Text)
-                            Update.Parameters.AddWithValue("@MaLoai", txtMaLoai.Text)
+                            Update.Parameters.AddWithValue("@MaLoai", txtNhanhieu.Text)
                             Update.Parameters.AddWithValue("@TenSP", txtTenSP.Text)
                             Update.Parameters.AddWithValue("@NgayNhap", dtpNgayNhap.Value)
-                            Update.Parameters.AddWithValue("@DonGia", txtDongia.Text)
-                            Update.Parameters.AddWithValue("@TonKho", txtTonKho.Text)
+                            Update.Parameters.AddWithValue("@DonGia", txtRAM.Text)
+                            Update.Parameters.AddWithValue("@TonKho", txtGia.Text)
                             Update.ExecuteNonQuery()
 
                             MessageBox.Show("Update thành công")
@@ -194,10 +209,10 @@ Public Class frmEdit_ProductList
                             btnSua.Text = "Sửa"
                             btnHuy.Hide()
                             txtMaSP.Text = ""
-                            txtMaLoai.Text = ""
+                            txtNhanhieu.Text = ""
                             txtTenSP.Text = ""
-                            txtDongia.Text = ""
-                            txtTonKho.Text = ""
+                            txtRAM.Text = ""
+                            txtGia.Text = ""
                         End If
                     End If
                 End If
@@ -216,18 +231,18 @@ Public Class frmEdit_ProductList
         btnSua.Text = "Sửa"
         btnHuy.Hide()
         txtMaSP.Text = ""
-        txtMaLoai.Text = ""
+        txtNhanhieu.Text = ""
         txtTenSP.Text = ""
-        txtDongia.Text = ""
-        txtTonKho.Text = ""
+        txtRAM.Text = ""
+        txtGia.Text = ""
     End Sub
 
     Private Sub btnNhaplai_Click(sender As Object, e As EventArgs) Handles btnNhaplai.Click
         txtMaSP.Text = ""
-        txtMaLoai.Text = ""
+        txtNhanhieu.Text = ""
         txtTenSP.Text = ""
-        txtDongia.Text = ""
-        txtTonKho.Text = ""
+        txtRAM.Text = ""
+        txtGia.Text = ""
     End Sub
 
 End Class

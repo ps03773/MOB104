@@ -8,7 +8,7 @@ Public Class frmProductList
 
         txtMaSP.Clear()
         txtTenSP.Clear()
-        txtMaLoai.Clear()
+        txtSoSR.Clear()
     End Sub
 
     Private Sub btnViewAll_Click(sender As Object, e As EventArgs) Handles btnViewAll.Click
@@ -19,7 +19,7 @@ Public Class frmProductList
         Edata = LoadSP.Tables(0)
         txtMaSP.Clear()
         txtTenSP.Clear()
-        txtMaLoai.Clear()
+        txtSoSR.Clear()
     End Sub
 
     Private Sub txtMaSP_TextChanged(sender As Object, e As EventArgs) Handles txtMaSP.TextChanged
@@ -27,7 +27,7 @@ Public Class frmProductList
             Connect.Open()
             Dim db As New DataTable
             Dadapter = New SqlDataAdapter _
-                ("Exec spTimsanpham @Ma_SP = '" & txtMaSP.Text & "', @Ten_SP = N'%" & txtTenSP.Text & "%', @Ma_loai = '%" & txtMaLoai.Text & "%'", Connect)
+                ("Exec spTimkiemSP @Ma_SP = '%" & txtMaSP.Text & "%', @Ten_SP = '%" & txtTenSP.Text & "%', @So_seri = '%" & txtSoSR.Text & "%'", Connect)
             db.Clear()
             Edata.Clear()
             Dadapter.Fill(db)
@@ -46,7 +46,7 @@ Public Class frmProductList
             Connect.Open()
             Dim db As New DataTable
             Dadapter = New SqlDataAdapter _
-                ("Exec spTimsanpham @Ma_SP = '" & txtMaSP.Text & "', @Ten_SP = N'%" & txtTenSP.Text & "%', @Ma_loai = '%" & txtMaLoai.Text & "%'", Connect)
+                ("Exec spTimkiemSP @Ma_SP = '%" & txtMaSP.Text & "%', @Ten_SP = '%" & txtTenSP.Text & "%', @So_seri = '%" & txtSoSR.Text & "%'", Connect)
             db.Clear()
             Edata.Clear()
             Dadapter.Fill(db)
@@ -60,12 +60,12 @@ Public Class frmProductList
         End Try
     End Sub
 
-    Private Sub txtLoaiSP_TextChanged(sender As Object, e As EventArgs) Handles txtMaLoai.TextChanged
+    Private Sub txtLoaiSP_TextChanged(sender As Object, e As EventArgs) Handles txtSoSR.TextChanged
         Try
             Connect.Open()
             Dim db As New DataTable
             Dadapter = New SqlDataAdapter _
-                ("Exec spTimsanpham @Ma_SP = '" & txtMaSP.Text & "', @Ten_SP = N'%" & txtTenSP.Text & "%', @Ma_loai = '%" & txtMaLoai.Text & "%'", Connect)
+                ("Exec spTimkiemSP @Ma_SP = '%" & txtMaSP.Text & "%', @Ten_SP = '%" & txtTenSP.Text & "%', @So_seri = '%" & txtSoSR.Text & "%'", Connect)
             db.Clear()
             Edata.Clear()
             Dadapter.Fill(db)

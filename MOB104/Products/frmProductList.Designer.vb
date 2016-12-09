@@ -26,7 +26,7 @@ Partial Class frmProductList
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtMaLoai = New System.Windows.Forms.TextBox()
+        Me.txtSoSR = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtMaSP = New System.Windows.Forms.TextBox()
         Me.txtTenSP = New System.Windows.Forms.TextBox()
@@ -55,7 +55,7 @@ Partial Class frmProductList
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.Control
+        Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(89, 12)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(163, 31)
@@ -65,14 +65,14 @@ Partial Class frmProductList
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.txtMaLoai)
+        Me.GroupBox1.Controls.Add(Me.txtSoSR)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.txtMaSP)
         Me.GroupBox1.Controls.Add(Me.txtTenSP)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.Control
+        Me.GroupBox1.ForeColor = System.Drawing.Color.Black
         Me.GroupBox1.Location = New System.Drawing.Point(329, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(386, 72)
@@ -80,22 +80,22 @@ Partial Class frmProductList
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Tìm kiếm"
         '
-        'txtMaLoai
+        'txtSoSR
         '
-        Me.txtMaLoai.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMaLoai.Location = New System.Drawing.Point(258, 41)
-        Me.txtMaLoai.Name = "txtMaLoai"
-        Me.txtMaLoai.Size = New System.Drawing.Size(118, 22)
-        Me.txtMaLoai.TabIndex = 4
+        Me.txtSoSR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSoSR.Location = New System.Drawing.Point(258, 41)
+        Me.txtSoSR.Name = "txtSoSR"
+        Me.txtSoSR.Size = New System.Drawing.Size(118, 22)
+        Me.txtSoSR.TabIndex = 4
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(255, 20)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(63, 18)
+        Me.Label4.Size = New System.Drawing.Size(64, 18)
         Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Mã loại"
+        Me.Label4.Text = "Số Seri"
         '
         'txtMaSP
         '
@@ -150,7 +150,7 @@ Partial Class frmProductList
         Me.dgvSP.AllowUserToDeleteRows = False
         Me.dgvSP.AllowUserToResizeColumns = False
         Me.dgvSP.AllowUserToResizeRows = False
-        Me.dgvSP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvSP.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgvSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvSP.GridColor = System.Drawing.SystemColors.Control
         Me.dgvSP.Location = New System.Drawing.Point(12, 90)
@@ -180,7 +180,7 @@ Partial Class frmProductList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(727, 398)
         Me.Controls.Add(Me.btnXuatDL)
         Me.Controls.Add(Me.dgvSP)
@@ -188,6 +188,7 @@ Partial Class frmProductList
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
+        Me.ForeColor = System.Drawing.Color.Black
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmProductList"
@@ -204,7 +205,7 @@ Partial Class frmProductList
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents txtMaLoai As System.Windows.Forms.TextBox
+    Friend WithEvents txtSoSR As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txtTenSP As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label

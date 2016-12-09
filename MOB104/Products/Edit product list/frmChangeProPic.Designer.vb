@@ -33,7 +33,7 @@ Partial Class frmChangeProPic
         Me.btnDoi = New System.Windows.Forms.Button()
         Me.btnXoa = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtMaSP = New System.Windows.Forms.TextBox()
+        Me.txtSoSR = New System.Windows.Forms.TextBox()
         CType(Me.KhungAnh, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -66,9 +66,9 @@ Partial Class frmChangeProPic
         Me.Label1.ForeColor = System.Drawing.SystemColors.Control
         Me.Label1.Location = New System.Drawing.Point(234, 64)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(57, 16)
+        Me.Label1.Size = New System.Drawing.Size(56, 16)
         Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Mã SP:"
+        Me.Label1.Text = "Số SR:"
         '
         'Label2
         '
@@ -148,15 +148,15 @@ Partial Class frmChangeProPic
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "ẢNH SẢN PHẨM"
         '
-        'txtMaSP
+        'txtSoSR
         '
-        Me.txtMaSP.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMaSP.Location = New System.Drawing.Point(303, 61)
-        Me.txtMaSP.Name = "txtMaSP"
-        Me.txtMaSP.ReadOnly = True
-        Me.txtMaSP.Size = New System.Drawing.Size(125, 22)
-        Me.txtMaSP.TabIndex = 2
-        Me.txtMaSP.TabStop = False
+        Me.txtSoSR.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSoSR.Location = New System.Drawing.Point(303, 61)
+        Me.txtSoSR.Name = "txtSoSR"
+        Me.txtSoSR.ReadOnly = True
+        Me.txtSoSR.Size = New System.Drawing.Size(125, 22)
+        Me.txtSoSR.TabIndex = 2
+        Me.txtSoSR.TabStop = False
         '
         'frmChangeProPic
         '
@@ -171,7 +171,7 @@ Partial Class frmChangeProPic
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtMaSP)
+        Me.Controls.Add(Me.txtSoSR)
         Me.Controls.Add(Me.txtTenSP)
         Me.Controls.Add(Me.KhungAnh)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
@@ -194,5 +194,5 @@ Partial Class frmChangeProPic
     Friend WithEvents btnDoi As Button
     Friend WithEvents btnXoa As Button
     Friend WithEvents Label3 As Label
-    Friend WithEvents txtMaSP As TextBox
+    Friend WithEvents txtSoSR As TextBox
 End Class
