@@ -11,17 +11,27 @@
         If _LogoutResult = Windows.Forms.DialogResult.Cancel Then
             frmMain.Close()
             Me.Close()
+        
+        ElseIf User = "admin" Then
+            frmMain.lblUser.Text = ""
+            frmMain.lblUser.Text = User
+            frmMain.MenuItemCNSP.Visible = True
+            frmMain.MenuItemCNKH.Visible = True
+            frmMain.MenuItemLogin.Visible = True
+            Me.Close()
         ElseIf _LogoutResult = Windows.Forms.DialogResult.OK Then
             frmMain.lblUser.Text = ""
             frmMain.lblUser.Text = User
             frmMain.MenuItemCNSP.Visible = True
             frmMain.MenuItemCNKH.Visible = True
+            frmMain.MenuItemLogin.Visible = False
             Me.Close()
         ElseIf _LogoutResult = Windows.Forms.DialogResult.Yes Then
             frmMain.lblUser.Text = ""
             frmMain.lblUser.Text = User
             frmMain.MenuItemCNSP.Visible = False
             frmMain.MenuItemCNKH.Visible = False
+            frmMain.MenuItemLogin.Visible = False
             Me.Close()
         Else
             frmMain.Close()
@@ -33,7 +43,4 @@
         Me.Close()
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
-    End Sub
 End Class

@@ -87,4 +87,8 @@ Public Class frmLogin
         frmCreateUser.ShowDialog()
     End Sub
 
+    Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtPassword.Clear()
+        txtUsername.Clear()
+    End Sub
 End Class

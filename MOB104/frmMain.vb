@@ -2,14 +2,22 @@
     Private _LoginResult As DialogResult
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If _LoginResult = Windows.Forms.DialogResult.OK Then
+        
+        If User = "admin" Then
             lblUser.Text = User
             MenuItemCNSP.Visible = True
             MenuItemCNKH.Visible = True
+            MenuItemLogin.Visible = True
+        ElseIf _LoginResult = Windows.Forms.DialogResult.OK Then
+            lblUser.Text = User
+            MenuItemCNSP.Visible = True
+            MenuItemCNKH.Visible = True
+            MenuItemLogin.Visible = False
         ElseIf _LoginResult = Windows.Forms.DialogResult.Yes Then
             lblUser.Text = User
             MenuItemCNSP.Visible = False
             MenuItemCNKH.Visible = False
+            MenuItemLogin.Visible = False
         Else
             Me.Close()
         End If
@@ -54,4 +62,7 @@
         frmEdit_ProductList.ShowDialog()
     End Sub
 
+    Private Sub MenuItemLogin_Click(sender As Object, e As EventArgs) Handles MenuItemLogin.Click
+        frmLoginTable.ShowDialog()
+    End Sub
 End Class

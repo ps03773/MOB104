@@ -27,6 +27,9 @@ Public Class frmCreateUser
                 MessageBox.Show("Tên tài khoản đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             ElseIf txtUsername.Text = "" Or txtPassword.Text = "" Or txtRe_password.Text = "" Or txtFullName.Text = "" Or txtEmail.Text = "" Then
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            ElseIf Len(txtUsername.Text) > 8 Then
+                MessageBox.Show("Tên đăng nhập quá dài" & vbCrLf &
+                                "Vui lòng sử dụng tên đăng nhập ít hơn 8 ký tự", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             ElseIf txtRe_password.Text <> txtRe_password.Text Then
                 MessageBox.Show("Mật khẩu không khớp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             ElseIf Len(txtPassword.Text) < 5 Then

@@ -46,6 +46,7 @@ Partial Class frmMain
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.lblUser = New System.Windows.Forms.Label()
+        Me.MenuItemLogin = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,7 +57,7 @@ Partial Class frmMain
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SảnPhẩmToolStripMenuItem, Me.KháchHàngToolStripMenuItem, Me.HóaĐơnToolStripMenuItem, Me.ĐăngXuấtToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SảnPhẩmToolStripMenuItem, Me.KháchHàngToolStripMenuItem, Me.HóaĐơnToolStripMenuItem, Me.ĐăngXuấtToolStripMenuItem, Me.MenuItemLogin})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(652, 24)
@@ -250,7 +251,7 @@ Partial Class frmMain
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Label6.Image = CType(resources.GetObject("Label6.Image"), System.Drawing.Image)
         Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label6.Location = New System.Drawing.Point(463, 0)
+        Me.Label6.Location = New System.Drawing.Point(464, -1)
         Me.Label6.Name = "Label6"
         Me.Label6.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label6.Size = New System.Drawing.Size(74, 24)
@@ -268,6 +269,16 @@ Partial Class frmMain
         Me.lblUser.Size = New System.Drawing.Size(113, 24)
         Me.lblUser.TabIndex = 0
         Me.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'MenuItemLogin
+        '
+        Me.MenuItemLogin.Image = CType(resources.GetObject("MenuItemLogin.Image"), System.Drawing.Image)
+        Me.MenuItemLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.MenuItemLogin.Name = "MenuItemLogin"
+        Me.MenuItemLogin.ShortcutKeys = System.Windows.Forms.Keys.F1
+        Me.MenuItemLogin.Size = New System.Drawing.Size(47, 20)
+        Me.MenuItemLogin.Text = "F1"
+        Me.MenuItemLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'frmMain
         '
@@ -321,4 +332,5 @@ Partial Class frmMain
     Friend WithEvents lblUser As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents MenuItemLogin As System.Windows.Forms.ToolStripMenuItem
 End Class

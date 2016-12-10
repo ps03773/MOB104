@@ -50,3 +50,4 @@ D:\MOB104\MOB104\obj\Debug\HuydtqPS03773_INF205_Assignment.frmProDelConfirm.reso
 D:\MOB104\MOB104\obj\Debug\HuydtqPS03773_INF205_Assignment.frmProductList.resources
 D:\MOB104\MOB104\obj\Debug\HuydtqPS03773_INF205_Assignment.Resources.resources
 D:\MOB104\MOB104\obj\Debug\MOB104.vbproj.GenerateResource.Cache
+D:\MOB104\MOB104\obj\Debug\HuydtqPS03773_INF205_Assignment.frmLoginTable.resources

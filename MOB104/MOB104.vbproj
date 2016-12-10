@@ -118,6 +118,12 @@
     <Compile Include="Login - Logout\frmCreateUser.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Login - Logout\frmLoginID.Designer.vb">
+      <DependentUpon>frmLoginID.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login - Logout\frmLoginID.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Products\Edit product list\frmChangeProPic.Designer.vb">
       <DependentUpon>frmChangeProPic.vb</DependentUpon>
     </Compile>
@@ -217,6 +223,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login - Logout\frmCreateUser.resx">
       <DependentUpon>frmCreateUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login - Logout\frmLoginID.resx">
+      <DependentUpon>frmLoginID.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Products\Edit product list\frmChangeProPic.resx">
       <DependentUpon>frmChangeProPic.vb</DependentUpon>
