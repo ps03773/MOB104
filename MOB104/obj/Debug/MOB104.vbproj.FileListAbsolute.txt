@@ -27,8 +27,6 @@ D:\MOB104\MOB104\bin\Debug\HuydtqPS03773_INF205_Assignment.exe.config
 D:\MOB104\MOB104\obj\Debug\HuydtqPS03773_INF205_Assignment.exe
 D:\MOB104\MOB104\obj\Debug\HuydtqPS03773_INF205_Assignment.xml
 D:\MOB104\MOB104\obj\Debug\HuydtqPS03773_INF205_Assignment.pdb
-D:\MOB104\MOB104\bin\Debug\Database1.mdf
-D:\MOB104\MOB104\bin\Debug\Database1_log.ldf
 D:\MOB104\MOB104\bin\Debug\HuydtqPS03773_INF205_Assignment.exe
 D:\MOB104\MOB104\bin\Debug\HuydtqPS03773_INF205_Assignment.pdb
 D:\MOB104\MOB104\bin\Debug\HuydtqPS03773_INF205_Assignment.xml

@@ -6,7 +6,7 @@ Module App_module
     Public Username As String
     Public Password As String
     '(Kết nối đến Database
-    Public _ConnectionString As String = "Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True"
+    Public _ConnectionString As String = "Data Source=KUROKAMI;Initial Catalog=QLBH_LAPTOP;Integrated Security=True"
     Public Connect As SqlConnection = New SqlConnection(_ConnectionString)
     ')
     Public Dadapter As SqlDataAdapter ' Gửi các truy vấn đến Database
