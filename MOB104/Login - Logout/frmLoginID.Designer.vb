@@ -54,6 +54,7 @@ Partial Class frmLoginTable
         Me.Controls.Add(Me.dgvMaLoai)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "frmLoginTable"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Tài khoản đăng nhập"

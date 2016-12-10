@@ -42,22 +42,6 @@
         frmProductList.ShowDialog()
     End Sub
 
-    Private Sub DanhSáchKháchHàngToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DanhSáchKháchHàngToolStripMenuItem.Click
-        frmCustomerList.ShowDialog()
-    End Sub
-
-    Private Sub ChiTiếtHóaĐơnToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChiTiếtHóaĐơnToolStripMenuItem.Click
-        frmInvoices.ShowDialog()
-    End Sub
-
-    Private Sub ChiTiếtHóaĐơnToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ChiTiếtHóaĐơnToolStripMenuItem1.Click
-        frmInvoiceDetails.ShowDialog()
-    End Sub
-
-    Private Sub CậpNhậtDanhSáchKHToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles MenuItemCNKH.Click
-        frmEdit_CustomerList.ShowDialog()
-    End Sub
-
     Private Sub CậpNhậtSảnPhẩmToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MenuItemCNSP.Click
         frmEdit_ProductList.ShowDialog()
     End Sub

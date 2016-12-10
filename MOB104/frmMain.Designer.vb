@@ -28,12 +28,13 @@ Partial Class frmMain
         Me.DanhMụcSảnPhẩmToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuItemCNSP = New System.Windows.Forms.ToolStripMenuItem()
         Me.KháchHàngToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DanhSáchKháchHàngToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuItemDSKH = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuItemCNKH = New System.Windows.Forms.ToolStripMenuItem()
         Me.HóaĐơnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChiTiếtHóaĐơnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ChiTiếtHóaĐơnToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ĐăngXuấtToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuItemLogin = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -46,7 +47,9 @@ Partial Class frmMain
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.lblUser = New System.Windows.Forms.Label()
-        Me.MenuItemLogin = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NhânViênToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuItemDSNV = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuItemCNDSNV = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,10 +60,10 @@ Partial Class frmMain
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SảnPhẩmToolStripMenuItem, Me.KháchHàngToolStripMenuItem, Me.HóaĐơnToolStripMenuItem, Me.ĐăngXuấtToolStripMenuItem, Me.MenuItemLogin})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SảnPhẩmToolStripMenuItem, Me.NhânViênToolStripMenuItem, Me.KháchHàngToolStripMenuItem, Me.HóaĐơnToolStripMenuItem, Me.ĐăngXuấtToolStripMenuItem, Me.MenuItemLogin})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(652, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(738, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -89,18 +92,18 @@ Partial Class frmMain
         '
         'KháchHàngToolStripMenuItem
         '
-        Me.KháchHàngToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DanhSáchKháchHàngToolStripMenuItem, Me.MenuItemCNKH})
+        Me.KháchHàngToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuItemDSKH, Me.MenuItemCNKH})
         Me.KháchHàngToolStripMenuItem.Image = CType(resources.GetObject("KháchHàngToolStripMenuItem.Image"), System.Drawing.Image)
         Me.KháchHàngToolStripMenuItem.Name = "KháchHàngToolStripMenuItem"
         Me.KháchHàngToolStripMenuItem.Size = New System.Drawing.Size(98, 20)
         Me.KháchHàngToolStripMenuItem.Text = "Khách hàng"
         '
-        'DanhSáchKháchHàngToolStripMenuItem
+        'MenuItemDSKH
         '
-        Me.DanhSáchKháchHàngToolStripMenuItem.Image = CType(resources.GetObject("DanhSáchKháchHàngToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.DanhSáchKháchHàngToolStripMenuItem.Name = "DanhSáchKháchHàngToolStripMenuItem"
-        Me.DanhSáchKháchHàngToolStripMenuItem.Size = New System.Drawing.Size(201, 22)
-        Me.DanhSáchKháchHàngToolStripMenuItem.Text = "Danh sách khách hàng"
+        Me.MenuItemDSKH.Image = CType(resources.GetObject("MenuItemDSKH.Image"), System.Drawing.Image)
+        Me.MenuItemDSKH.Name = "MenuItemDSKH"
+        Me.MenuItemDSKH.Size = New System.Drawing.Size(201, 22)
+        Me.MenuItemDSKH.Text = "Danh sách khách hàng"
         '
         'MenuItemCNKH
         '
@@ -139,10 +142,20 @@ Partial Class frmMain
         Me.ĐăngXuấtToolStripMenuItem.Size = New System.Drawing.Size(133, 20)
         Me.ĐăngXuấtToolStripMenuItem.Text = "Đăng xuất (Ctrl+X)"
         '
+        'MenuItemLogin
+        '
+        Me.MenuItemLogin.Image = CType(resources.GetObject("MenuItemLogin.Image"), System.Drawing.Image)
+        Me.MenuItemLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.MenuItemLogin.Name = "MenuItemLogin"
+        Me.MenuItemLogin.ShortcutKeys = System.Windows.Forms.Keys.F1
+        Me.MenuItemLogin.Size = New System.Drawing.Size(47, 20)
+        Me.MenuItemLogin.Text = "F1"
+        Me.MenuItemLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 37)
+        Me.PictureBox1.Location = New System.Drawing.Point(25, 37)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(197, 62)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -152,9 +165,9 @@ Partial Class frmMain
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(374, 129)
+        Me.PictureBox2.Location = New System.Drawing.Point(436, 112)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(266, 259)
+        Me.PictureBox2.Size = New System.Drawing.Size(278, 276)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 2
         Me.PictureBox2.TabStop = False
@@ -163,7 +176,7 @@ Partial Class frmMain
         '
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(294, 50)
+        Me.Label1.Location = New System.Drawing.Point(323, 50)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(318, 49)
         Me.Label1.TabIndex = 0
@@ -179,9 +192,9 @@ Partial Class frmMain
         Me.GroupBox1.Controls.Add(Me.PictureBox3)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.Black
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 129)
+        Me.GroupBox1.Location = New System.Drawing.Point(25, 129)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(356, 235)
+        Me.GroupBox1.Size = New System.Drawing.Size(356, 220)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Nhóm thực hiện: NHÓM 1"
@@ -251,7 +264,7 @@ Partial Class frmMain
         Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Label6.Image = CType(resources.GetObject("Label6.Image"), System.Drawing.Image)
         Me.Label6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Label6.Location = New System.Drawing.Point(464, -1)
+        Me.Label6.Location = New System.Drawing.Point(550, -1)
         Me.Label6.Name = "Label6"
         Me.Label6.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.Label6.Size = New System.Drawing.Size(74, 24)
@@ -264,28 +277,40 @@ Partial Class frmMain
         Me.lblUser.BackColor = System.Drawing.Color.White
         Me.lblUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.lblUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUser.Location = New System.Drawing.Point(539, 0)
+        Me.lblUser.Location = New System.Drawing.Point(625, 0)
         Me.lblUser.Name = "lblUser"
         Me.lblUser.Size = New System.Drawing.Size(113, 24)
         Me.lblUser.TabIndex = 0
         Me.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'MenuItemLogin
+        'NhânViênToolStripMenuItem
         '
-        Me.MenuItemLogin.Image = CType(resources.GetObject("MenuItemLogin.Image"), System.Drawing.Image)
-        Me.MenuItemLogin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.MenuItemLogin.Name = "MenuItemLogin"
-        Me.MenuItemLogin.ShortcutKeys = System.Windows.Forms.Keys.F1
-        Me.MenuItemLogin.Size = New System.Drawing.Size(47, 20)
-        Me.MenuItemLogin.Text = "F1"
-        Me.MenuItemLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.NhânViênToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuItemDSNV, Me.MenuItemCNDSNV})
+        Me.NhânViênToolStripMenuItem.Image = CType(resources.GetObject("NhânViênToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.NhânViênToolStripMenuItem.Name = "NhânViênToolStripMenuItem"
+        Me.NhânViênToolStripMenuItem.Size = New System.Drawing.Size(89, 20)
+        Me.NhânViênToolStripMenuItem.Text = "Nhân viên"
+        '
+        'MenuItemDSNV
+        '
+        Me.MenuItemDSNV.Image = CType(resources.GetObject("MenuItemDSNV.Image"), System.Drawing.Image)
+        Me.MenuItemDSNV.Name = "MenuItemDSNV"
+        Me.MenuItemDSNV.Size = New System.Drawing.Size(234, 22)
+        Me.MenuItemDSNV.Text = "Danh sách nhân viên"
+        '
+        'MenuItemCNDSNV
+        '
+        Me.MenuItemCNDSNV.Image = CType(resources.GetObject("MenuItemCNDSNV.Image"), System.Drawing.Image)
+        Me.MenuItemCNDSNV.Name = "MenuItemCNDSNV"
+        Me.MenuItemCNDSNV.Size = New System.Drawing.Size(234, 22)
+        Me.MenuItemCNDSNV.Text = "Cập nhật danh sách nhân viên"
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(652, 431)
+        Me.ClientSize = New System.Drawing.Size(738, 411)
         Me.Controls.Add(Me.lblUser)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.GroupBox1)
@@ -295,6 +320,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Trang quản lý"
@@ -326,11 +352,14 @@ Partial Class frmMain
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents DanhMụcSảnPhẩmToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuItemCNSP As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents DanhSáchKháchHàngToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MenuItemDSKH As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuItemCNKH As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents lblUser As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents MenuItemLogin As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents NhânViênToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MenuItemDSNV As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MenuItemCNDSNV As System.Windows.Forms.ToolStripMenuItem
 End Class

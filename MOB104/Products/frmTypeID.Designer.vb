@@ -54,9 +54,10 @@ Partial Class frmTypeID
         Me.Controls.Add(Me.dgvMaLoai)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "frmTypeID"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Loại sản phẩm"
+        Me.Text = "Danh sách đại lí"
         CType(Me.dgvMaLoai, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
