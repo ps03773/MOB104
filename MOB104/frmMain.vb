@@ -49,4 +49,12 @@
     Private Sub MenuItemLogin_Click(sender As Object, e As EventArgs) Handles MenuItemLogin.Click
         frmLoginTable.ShowDialog()
     End Sub
+
+    Private Sub MenuItemDSNV_Click(sender As Object, e As EventArgs) Handles MenuItemDSNV.Click
+        frmStaffList.ShowDialog()
+    End Sub
+
+    Private Sub MenuItemCNDSNV_Click(sender As Object, e As EventArgs) Handles MenuItemCNDSNV.Click
+        frmEdit_StaffList.ShowDialog()
+    End Sub
 End Class

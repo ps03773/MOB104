@@ -2,16 +2,16 @@
 Imports System.Data.SqlClient
 Imports System.IO
 Imports System.Drawing.Imaging
-Public Class frmChangeProPic
+Public Class frmChangeStapic
     Private GetPath As String 'Khai báo biến cục bộ để lưu đường dẫn đến file ảnh (dùng cho toàn form)
 
     'Sự kiện load form
-    Private Sub ChangeProPic_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtSoSR.Text = frmEdit_ProductList.txtSoSR.Text 'Lấy mã SP từ form Sản phẩm
-        txtTenSP.Text = frmEdit_ProductList.txtTenSP.Text 'Lấy tên SP từ form Sản phẩm
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtMaNV.Text = frmEdit_StaffList.txtMaNV.Text 'Lấy mã SP từ form Sản phẩm
+        txtTenNV.Text = frmEdit_StaffList.txtHoTen.Text 'Lấy tên SP từ form Sản phẩm
         GetPath = "" 'Làm mới đường dẫn, set giá trị rỗng
 
-        Dim Dadapter = New SqlDataAdapter("Select HINH, SO_SERI From SAN_PHAM Where SO_SERI = '" & txtSoSR.Text & "'", Connect)
+        Dim Dadapter = New SqlDataAdapter("Select HINH, MA_NV From NHAN_VIEN Where MA_NV = '" & txtMaNV.Text & "'", Connect)
         Dim ds As New DataTable
         Try
             Connect.Open()
@@ -72,7 +72,7 @@ Public Class frmChangeProPic
 
     'Thêm ảnh SP vào CSDL
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        Dim cmd As New SqlCommand("Update SAN_PHAM Set HINH = @ImageData Where SO_SERI = @SoSR", Connect)
+        Dim cmd As New SqlCommand("Update NHAN_VIEN Set HINH = @ImageData Where MA_NV = @MaNV", Connect)
         Dim FilePath As String = GetPath 'Khai báo FilePath là biến lưu đường dẫn ảnh => gán đường dẫn từ GetPath cho FilePath
         If String.IsNullOrEmpty(FilePath) Then 'Nếu FilePath không chứa dũ liệu => hiện thông báo
             MessageBox.Show("Vui lòng chọn ảnh", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -89,7 +89,7 @@ Public Class frmChangeProPic
                 0, 0, Nothing, DataRowVersion.Current, bytImage)
             ')
             '(Gán giá trị cho 2 biến @MaSP & @ImageData trong câu lệnh SQL Insert dữ liệu
-            cmd.Parameters.AddWithValue("@SoSR", txtSoSR.Text)
+            cmd.Parameters.AddWithValue("@MaNV", txtMaNV.Text)
             cmd.Parameters.Add(prm)
             ')
             Try
@@ -107,7 +107,7 @@ Public Class frmChangeProPic
 
     'Đổi ảnh SP: cấu trúc code tương tự như thêm ảnh, chỉ khác câu lệnh SQL
     Private Sub Doi_Click(sender As Object, e As EventArgs) Handles btnDoi.Click
-        Dim cmd As New SqlCommand("Update SAN_PHAM Set HINH = @ImageData Where SO_SERI = @SoSR", Connect)
+        Dim cmd As New SqlCommand("Update NHAN_VIEN Set HINH = @ImageData Where MA_NV = @MaNV", Connect)
         Dim FilePath As String = GetPath
         If String.IsNullOrEmpty(FilePath) Then
             MessageBox.Show("Vui lòng chọn ảnh", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -120,7 +120,7 @@ Public Class frmChangeProPic
             Dim prm As New SqlParameter("@ImageData", SqlDbType.VarBinary,
                 bytImage.Length, ParameterDirection.Input, False,
                 0, 0, Nothing, DataRowVersion.Current, bytImage)
-            cmd.Parameters.AddWithValue("@SoSR", txtSoSR.Text)
+            cmd.Parameters.AddWithValue("@MaNV", txtMaNV.Text)
             cmd.Parameters.Add(prm)
             Try
                 Connect.Open()
@@ -137,8 +137,8 @@ Public Class frmChangeProPic
 
     'Xóa 1 record với mã SP chúng ta đã chọn trong table ANH_SAN_PHAM
     Private Sub btnXoa_Click(sender As Object, e As EventArgs) Handles btnXoa.Click
-        Dim cmd As New SqlCommand("Update SAN_PHAM Set HINH = Null Where SO_SERI = @SoSR", Connect)
-        cmd.Parameters.AddWithValue("@SoSR", txtSoSR.Text)
+        Dim cmd As New SqlCommand("Update NHAN_VIEN Set HINH = Null Where MA_NV = @MaNV", Connect)
+        cmd.Parameters.AddWithValue("@MaNV", txtMaNV.Text)
         Try
             Connect.Open()
             cmd.ExecuteNonQuery()

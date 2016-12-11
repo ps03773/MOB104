@@ -22,9 +22,9 @@ Module App_module
         Return db
     End Function
 
-    ' Đọc dữ liệu từ bảng SAN_PHAM
-    Public Function LoadKH() As DataSet
-        Dadapter = New SqlDataAdapter("Select Ma_SP as 'Mã SP' , Ten_SP as 'Tên sản phẩm', Loai_san_pham as 'Loại sản phẩm', SAN_PHAM.Ma_loai as 'Mã loại', Convert(Date,Ngay_nhap,105) as 'Ngày nhập', Don_gia as 'Đơn giá', SL_ton_kho as 'SL tồn kho' From SAN_PHAM join LOAI_SAN_PHAM on SAN_PHAM.Ma_loai = LOAI_SAN_PHAM.Ma_loai", Connect)
+    ' Đọc dữ liệu từ bảng NHAN_VIEN
+    Public Function LoadNV() As DataSet
+        Dadapter = New SqlDataAdapter("Select MA_NV as 'Mã nhân viên' , HO_TEN as 'Họ & Tên', SDT as 'SĐT', DIA_CHI as 'Đại chỉ', Convert(Date,Ngay_vao_lam,105) as 'Ngày vào làm', LUONG as 'Mức lương' From NHAN_VIEN", Connect)
         Dim db As New DataSet
         Connect.Open()
         Dadapter.Fill(db)

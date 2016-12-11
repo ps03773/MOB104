@@ -27,6 +27,9 @@ Partial Class frmMain
         Me.SảnPhẩmToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DanhMụcSảnPhẩmToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuItemCNSP = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NhânViênToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuItemDSNV = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuItemCNDSNV = New System.Windows.Forms.ToolStripMenuItem()
         Me.KháchHàngToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuItemDSKH = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuItemCNKH = New System.Windows.Forms.ToolStripMenuItem()
@@ -47,9 +50,6 @@ Partial Class frmMain
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.lblUser = New System.Windows.Forms.Label()
-        Me.NhânViênToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuItemDSNV = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuItemCNDSNV = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,6 +89,28 @@ Partial Class frmMain
         Me.MenuItemCNSP.Name = "MenuItemCNSP"
         Me.MenuItemCNSP.Size = New System.Drawing.Size(184, 22)
         Me.MenuItemCNSP.Text = "Cập nhật sản phẩm"
+        '
+        'NhânViênToolStripMenuItem
+        '
+        Me.NhânViênToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuItemDSNV, Me.MenuItemCNDSNV})
+        Me.NhânViênToolStripMenuItem.Image = CType(resources.GetObject("NhânViênToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.NhânViênToolStripMenuItem.Name = "NhânViênToolStripMenuItem"
+        Me.NhânViênToolStripMenuItem.Size = New System.Drawing.Size(89, 20)
+        Me.NhânViênToolStripMenuItem.Text = "Nhân viên"
+        '
+        'MenuItemDSNV
+        '
+        Me.MenuItemDSNV.Image = CType(resources.GetObject("MenuItemDSNV.Image"), System.Drawing.Image)
+        Me.MenuItemDSNV.Name = "MenuItemDSNV"
+        Me.MenuItemDSNV.Size = New System.Drawing.Size(234, 22)
+        Me.MenuItemDSNV.Text = "Danh sách nhân viên"
+        '
+        'MenuItemCNDSNV
+        '
+        Me.MenuItemCNDSNV.Image = CType(resources.GetObject("MenuItemCNDSNV.Image"), System.Drawing.Image)
+        Me.MenuItemCNDSNV.Name = "MenuItemCNDSNV"
+        Me.MenuItemCNDSNV.Size = New System.Drawing.Size(234, 22)
+        Me.MenuItemCNDSNV.Text = "Cập nhật danh sách nhân viên"
         '
         'KháchHàngToolStripMenuItem
         '
@@ -282,28 +304,6 @@ Partial Class frmMain
         Me.lblUser.Size = New System.Drawing.Size(113, 24)
         Me.lblUser.TabIndex = 0
         Me.lblUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'NhânViênToolStripMenuItem
-        '
-        Me.NhânViênToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuItemDSNV, Me.MenuItemCNDSNV})
-        Me.NhânViênToolStripMenuItem.Image = CType(resources.GetObject("NhânViênToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.NhânViênToolStripMenuItem.Name = "NhânViênToolStripMenuItem"
-        Me.NhânViênToolStripMenuItem.Size = New System.Drawing.Size(89, 20)
-        Me.NhânViênToolStripMenuItem.Text = "Nhân viên"
-        '
-        'MenuItemDSNV
-        '
-        Me.MenuItemDSNV.Image = CType(resources.GetObject("MenuItemDSNV.Image"), System.Drawing.Image)
-        Me.MenuItemDSNV.Name = "MenuItemDSNV"
-        Me.MenuItemDSNV.Size = New System.Drawing.Size(234, 22)
-        Me.MenuItemDSNV.Text = "Danh sách nhân viên"
-        '
-        'MenuItemCNDSNV
-        '
-        Me.MenuItemCNDSNV.Image = CType(resources.GetObject("MenuItemCNDSNV.Image"), System.Drawing.Image)
-        Me.MenuItemCNDSNV.Name = "MenuItemCNDSNV"
-        Me.MenuItemCNDSNV.Size = New System.Drawing.Size(234, 22)
-        Me.MenuItemCNDSNV.Text = "Cập nhật danh sách nhân viên"
         '
         'frmMain
         '

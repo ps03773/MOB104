@@ -3,7 +3,7 @@ Imports System.Data.DataSet
 Public Class frmEdit_CustomerList
 
     Private Sub frmEdit_CustomerList_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        dgvKH.DataSource = LoadKH.Tables(0)
+        dgvKH.DataSource = LoadCTHD.Tables(0)
         btnHuy.Hide()
     End Sub
 
@@ -61,7 +61,7 @@ Public Class frmEdit_CustomerList
         End Try
 
         If frmCusAddConfirm.DialogResult = Windows.Forms.DialogResult.OK Then
-            dgvKH.DataSource = LoadKH.Tables(0)
+            dgvKH.DataSource = LoadCTHD.Tables(0)
         End If
     End Sub
 
@@ -123,7 +123,7 @@ Public Class frmEdit_CustomerList
             Connect.Close()
         End Try
         dgvKH.DataSource = Nothing
-        dgvKH.DataSource = LoadKH.Tables(0)
+        dgvKH.DataSource = LoadCTHD.Tables(0)
     End Sub
 
     Private Sub btnHuy_Click(sender As Object, e As EventArgs) Handles btnHuy.Click
@@ -163,7 +163,7 @@ Public Class frmEdit_CustomerList
         End Try
 
         If frmCusDelConfirm.DialogResult = Windows.Forms.DialogResult.OK Then
-            dgvKH.DataSource = LoadKH.Tables(0)
+            dgvKH.DataSource = LoadCTHD.Tables(0)
         End If
     End Sub
 

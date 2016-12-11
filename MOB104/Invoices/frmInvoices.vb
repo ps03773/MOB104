@@ -7,7 +7,7 @@ Public Class frmInvoices
         cboMaHD.DataSource = LoadHD.Tables(0)
         cboMaHD.DisplayMember = "Mã HĐ"
         cboMaHD.ValueMember = "Mã HĐ"
-        cboMaKH.DataSource = LoadKH.Tables(0)
+        cboMaKH.DataSource = LoadCTHD.Tables(0)
         cboMaKH.DisplayMember = "Mã KH"
         cboMaKH.ValueMember = "Mã KH"
     End Sub
@@ -53,7 +53,7 @@ Public Class frmInvoices
         If ckxMaKH.Checked = True Then
             cboMaKH.DataSource = Nothing
         Else
-            cboMaKH.DataSource = LoadKH.Tables(0)
+            cboMaKH.DataSource = LoadCTHD.Tables(0)
             cboMaKH.DisplayMember = "Mã KH"
             cboMaKH.ValueMember = "Mã KH"
         End If

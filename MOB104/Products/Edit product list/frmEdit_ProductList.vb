@@ -49,7 +49,7 @@ Public Class frmEdit_ProductList
     End Sub
 
     'Sự kiện click vào ô bất kì trong DataGridView
-    Private Sub dgvSP_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSP.CellClick
+    Private Sub dgvNV_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvSP.CellClick
         '(Nếu có ô được click
         If dgvSP.SelectedCells.Count > 0 Then
             '(Dữ liệu hiển thị trên các Textbox và DateTimePicker sẽ lần lượt là từng cột trong cùng một hàng DataGridView
@@ -73,8 +73,8 @@ Public Class frmEdit_ProductList
 
     'Nút thao tác
     Private Sub btnThaoTac_Click(sender As Object, e As EventArgs) Handles btnThaoTac.Click
-        frmChangeProPic.ShowDialog()
-        If frmChangeProPic.DialogResult = DialogResult.OK Then 'Kết quả thực thi của form chọn ảnh frmChangeProPic
+        frmChangeStaPic.ShowDialog()
+        If frmChangeStaPic.DialogResult = DialogResult.OK Then 'Kết quả thực thi của form chọn ảnh frmChangeProPic
             Loadanh()
         End If
     End Sub
@@ -127,7 +127,7 @@ Public Class frmEdit_ProductList
                     MessageBox.Show("Trùng số seri", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                     txtMaSP.Focus()
                 Else
-                    frmProAddConfirm.ShowDialog()
+                    frmStaAddConfirm.ShowDialog()
                 End If
             End If
         Catch ex As Exception
@@ -136,7 +136,7 @@ Public Class frmEdit_ProductList
             Connect.Close()
         End Try
 
-        If frmProAddConfirm.DialogResult = Windows.Forms.DialogResult.OK Then
+        If frmStaAddConfirm.DialogResult = Windows.Forms.DialogResult.OK Then
             dgvSP.DataSource = LoadSP.Tables(0)
         End If
     End Sub
@@ -154,7 +154,7 @@ Public Class frmEdit_ProductList
                 db.Clear()
                 Dadapter.Fill(db)
                 If db.Rows.Count > 0 Then
-                    frmProDelConfirm.ShowDialog()
+                    frmStaDelConfirm.ShowDialog()
                 Else
                     MessageBox.Show("Số Seri không khớp", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 End If
@@ -165,7 +165,7 @@ Public Class frmEdit_ProductList
             Connect.Close()
         End Try
 
-        If frmProDelConfirm.DialogResult = Windows.Forms.DialogResult.OK Then
+        If frmStaDelConfirm.DialogResult = Windows.Forms.DialogResult.OK Then
             dgvSP.DataSource = LoadSP.Tables(0)
         End If
     End Sub

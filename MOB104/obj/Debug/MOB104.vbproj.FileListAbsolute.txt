@@ -49,3 +49,8 @@ D:\MOB104\MOB104\obj\Debug\HuydtqPS03773_INF205_Assignment.frmProductList.resour
 D:\MOB104\MOB104\obj\Debug\HuydtqPS03773_INF205_Assignment.Resources.resources
 D:\MOB104\MOB104\obj\Debug\MOB104.vbproj.GenerateResource.Cache
 D:\MOB104\MOB104\obj\Debug\HuydtqPS03773_INF205_Assignment.frmLoginTable.resources
+D:\MOB104\MOB104\obj\Debug\HuydtqPS03773_INF205_Assignment.frmChangeStapic.resources
+D:\MOB104\MOB104\obj\Debug\HuydtqPS03773_INF205_Assignment.frmEdit_StaffList.resources
+D:\MOB104\MOB104\obj\Debug\HuydtqPS03773_INF205_Assignment.frmStaAddConfirm.resources
+D:\MOB104\MOB104\obj\Debug\HuydtqPS03773_INF205_Assignment.frmStaDelConfirm.resources
+D:\MOB104\MOB104\obj\Debug\HuydtqPS03773_INF205_Assignment.frmStaffList.resources
